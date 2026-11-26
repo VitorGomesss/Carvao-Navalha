@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carvão & Navalha — Barbearia Clássica & Moderna na Av. Paulista, São Paulo. Tradição no corte, precisão no detalhe. Agende online seu corte, barba terapia ou compre nossa linha exclusiva.">
+  <meta name="theme-color" content="#111111">
+  <title>Carvão &amp; Navalha — Barbearia Clássica &amp; Moderna | Av. Paulista</title>
+
+  <!-- Google Fonts: Oswald (Títulos) & Inter (Textos, Menus e Botões) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon minimalista em SVG inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111111'/%3E%3Cpath d='M32 10L50 32L32 54L14 32Z' fill='none' stroke='%23C89B3C' stroke-width='3'/%3E%3Cpath d='M24 24L40 40M40 24L24 40' stroke='%23C89B3C' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Link de acessibilidade para pular direto ao conteúdo -->
+  <a class="skip-link" href="#inicio">Ir para o conteúdo principal</a>
+
+  <!-- =========================================================================
+       1. HEADER FIXO
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <!-- Logo à esquerda -->
+      <a href="#inicio" class="brand-logo" aria-label="Carvão & Navalha — Página Inicial">
+        <span class="brand-emblem" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+            <path d="M16 2.5L28.5 16L16 29.5L3.5 16L16 2.5Z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M11 11L21 21M21 11L11 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="16" cy="16" r="2" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">CARVÃO &amp; NAVALHA</span>
+          <span class="brand-tagline">BARBEARIA CLÁSSICA &amp; MODERNA</span>
+        </span>
+      </a>
+
+      <!-- Menu central (Desktop) -->
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link is-active">Início</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#produtos" class="nav-link">Produtos</a></li>
+          <li><a href="#equipe" class="nav-link">Equipe</a></li>
+          <li><a href="#galeria" class="nav-link">Galeria</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ações à direita: Carrinho + CTA Agendar + Menu Mobile -->
+      <div class="header-actions">
+        <button
+          type="button"
+          class="cart-trigger"
+          id="open-cart-btn"
+          aria-label="Abrir carrinho de compras"
+          aria-controls="cart-drawer"
+          aria-expanded="false"
+        >
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cart-count-badge" aria-live="polite">0</span>
+        </button>
+
+        <button type="button" class="btn btn-primary header-cta" data-open-booking>
+          Agendar Horário
+        </button>
+
+        <button
+          type="button"
+          class="mobile-menu-toggle"
+          id="mobile-menu-toggle"
+          aria-label="Abrir menu de navegação"
+          aria-controls="mobile-nav"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <nav aria-label="Navegação mobile">
+        <ul class="mobile-nav-list">
+          <li><a href="#inicio" class="mobile-nav-link">Início</a></li>
+          <li><a href="#servicos" class="mobile-nav-link">Serviços</a></li>
+          <li><a href="#produtos" class="mobile-nav-link">Produtos</a></li>
+          <li><a href="#equipe" class="mobile-nav-link">Equipe</a></li>
+          <li><a href="#galeria" class="mobile-nav-link">Galeria</a></li>
+          <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+          <button type="button" class="btn btn-primary btn-full" data-open-booking>
+            Agendar Horário
+          </button>
+          <p class="mobile-nav-meta">Av. Paulista, 1450 • Seg–Sáb</p>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         2. HERO SECTION
+         ======================================================================= -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img
+          src="assets/images/hero-barbershop.jpg"
+          alt=""
+          class="hero-bg-img"
+          fetchpriority="high"
+        >
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span>Tradição no corte, precisão no detalhe.</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-title">
+            Seu estilo elevado ao <span class="text-gold">próximo nível</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Barbearia clássica e moderna no coração da Av. Paulista. Cortes autorais, barba terapia com toalha quente e um ritual exclusivo em ambiente sofisticado.
+          </p>
+
+          <div class="hero-ctas">
+            <button type="button" class="btn btn-primary btn-lg" data-open-booking>
+              <span>Agendar Horário</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <a href="#servicos" class="btn btn-outline btn-lg">
+              Conhecer Serviços
+            </a>
+          </div>
+        </div>
+
+        <!-- Barra de Prova Social -->
+        <div class="social-proof-bar" aria-label="Destaques e avaliações da barbearia">
+          <div class="proof-item">
+            <span class="proof-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </span>
+            <div class="proof-text">
+              <strong class="proof-value">4.9/5 Google</strong>
+              <span class="proof-label">Avaliação verificada</span>
+            </div>
+          </div>
+
+          <div class="proof-divider" aria-hidden="true"></div>
+
+          <div class="proof-item">
+            <span class="proof-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </span>
+            <div class="proof-text">
+              <strong class="proof-value">+2.500 Clientes</strong>
+              <span class="proof-label">Atendidos na Paulista</span>
+            </div>
+          </div>
+
+          <div class="proof-divider" aria-hidden="true"></div>
+
+          <div class="proof-item">
+            <span class="proof-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+            </span>
+            <div class="proof-text">
+              <strong class="proof-value">Café &amp; Cerveja Cortesia</strong>
+              <span class="proof-label">Espresso ou chopp artesanal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. DIFERENCIAIS (4 CARDS MINIMALISTAS)
+         ======================================================================= -->
+    <section class="section section-diferenciais" id="diferenciais" aria-labelledby="diferenciais-title">
+      <div class="container">
+        <div class="sr-only">
+          <h2 id="diferenciais-title">Nossos Diferenciais</h2>
+        </div>
+
+        <div class="diferenciais-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 2c0 2.5-2 3.5-2 6s2 3.5 2 6"></path>
+                <path d="M12 2c0 2.5-2 3.5-2 6s2 3.5 2 6"></path>
+                <path d="M16 2c0 2.5-2 3.5-2 6s2 3.5 2 6"></path>
+                <rect x="4" y="16" width="16" height="5" rx="2.5"></rect>
+              </svg>
+            </div>
+            <h3 class="feature-title">Toalha Quente &amp; Aromaterapia</h3>
+            <p class="feature-desc">Ritual clássico com vapor e óleos essenciais de cedro e eucalipto para relaxamento profundo e preparo da pele.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="6" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Profissionais Especialistas</h3>
+            <p class="feature-desc">Time experiente em tesoura clássica, degradê de precisão e visagismo sob medida para o seu estilo.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5"></path>
+                <path d="M3 13a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4H3v-4z"></path>
+                <path d="M5 17v3"></path>
+                <path d="M19 17v3"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Ambiente Climatizado &amp; Lounge</h3>
+            <p class="feature-desc">Espaço aconchegante com climatização ideal, trilha selecionada, café moído na hora e cerveja gelada cortesia.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <path d="M9 16l2 2 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Agendamento Online sem Fila</h3>
+            <p class="feature-desc">Reserve serviço, barbeiro e horário em segundos pelo site e seja atendido com pontualidade absoluta.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. SERVIÇOS (GRID DE 6 CARDS)
+         ======================================================================= -->
+    <section class="section section-servicos" id="servicos" aria-labelledby="servicos-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-eyebrow">Menu de Serviços</span>
+          <h2 class="section-title" id="servicos-title">Cortes &amp; Rituais</h2>
+          <p class="section-subtitle">
+            Cada serviço inclui consultoria de visagismo, acabamento na navalha e cortesia de café espresso ou cerveja artesanal.
+          </p>
+        </header>
+
+        <!-- Renderizado dinamicamente via script.js a partir de SERVICES_DATA -->
+        <div class="services-grid" id="services-grid"></div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. VITRINE DE PRODUTOS (LOJA COM FILTROS + CARRINHO)
+         ======================================================================= -->
+    <section class="section section-produtos" id="produtos" aria-labelledby="produtos-title">
+      <div class="container">
+        <div class="section-header-row reveal">
+          <div class="section-header section-header-left">
+            <span class="section-eyebrow">Loja Oficial</span>
+            <h2 class="section-title" id="produtos-title">Linha Carvão &amp; Navalha</h2>
+            <p class="section-subtitle">
+              Produtos de alta performance selecionados pelos nossos barbeiros para manter o cuidado diário em casa.
+            </p>
+          </div>
+
+          <!-- Abas de Filtro -->
+          <div class="filter-tabs" role="tablist" aria-label="Filtrar produtos por categoria" id="product-filter-tabs">
+            <button type="button" class="filter-tab is-active" role="tab" aria-selected="true" data-category="Todos">Todos</button>
+            <button type="button" class="filter-tab" role="tab" aria-selected="false" data-category="Fixação">Fixação</button>
+            <button type="button" class="filter-tab" role="tab" aria-selected="false" data-category="Barba">Barba</button>
+            <button type="button" class="filter-tab" role="tab" aria-selected="false" data-category="Banho">Banho</button>
+            <button type="button" class="filter-tab" role="tab" aria-selected="false" data-category="Kits">Kits</button>
+          </div>
+        </div>
+
+        <!-- Renderizado dinamicamente via script.js a partir de PRODUCTS_DATA -->
+        <div class="products-grid" id="products-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. EQUIPE (3 CARDS COM PRÉ-SELEÇÃO NO MODAL)
+         ======================================================================= -->
+    <section class="section section-equipe" id="equipe" aria-labelledby="equipe-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-eyebrow">Mestres da Navalha</span>
+          <h2 class="section-title" id="equipe-title">Nossa Equipe</h2>
+          <p class="section-subtitle">
+            Escolha o especialista ideal para o seu estilo. Ao clicar em agendar, o profissional já fica pré-selecionado.
+          </p>
+        </header>
+
+        <!-- Renderizado dinamicamente via script.js a partir de TEAM_DATA -->
+        <div class="team-grid" id="team-grid"></div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. GALERIA (BENTO GRID) & DEPOIMENTOS (3 CARDS 5 ESTRELAS)
+         ======================================================================= -->
+    <section class="section section-galeria" id="galeria" aria-labelledby="galeria-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-eyebrow">Atmosfera &amp; Precisão</span>
+          <h2 class="section-title" id="galeria-title">Galeria &amp; Experiência</h2>
+          <p class="section-subtitle">
+            Um olhar pelo nosso espaço na Av. Paulista e pelos detalhes que transformam cada visita em um ritual.
+          </p>
+        </header>
+
+        <!-- Bento Grid -->
+        <div class="bento-grid reveal" id="gallery-bento">
+          <figure class="bento-item bento-wide-left" data-lightbox-src="assets/images/gallery-haircut.jpg" data-lightbox-caption="Corte Masculino Signature — Precisão em cada transição">
+            <img src="assets/images/gallery-haircut.jpg" alt="Barbeiro realizando corte fade de precisão com máquina e pente" loading="lazy">
+            <figcaption class="bento-caption">
+              <span class="bento-tag">Precisão</span>
+              <strong>Skin Fade &amp; Visagismo</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="bento-item bento-tall-center" data-lightbox-src="assets/images/gallery-towel.jpg" data-lightbox-caption="Barba Terapia Tradicional — Ritual de toalha quente com óleos essenciais">
+            <img src="assets/images/gallery-towel.jpg" alt="Ritual de barba terapia com toalha quente e vapor suave" loading="lazy">
+            <figcaption class="bento-caption">
+              <span class="bento-tag">Ritual</span>
+              <strong>Toalha Quente &amp; Aromaterapia</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="bento-item bento-top-right" data-lightbox-src="assets/images/gallery-lounge.jpg" data-lightbox-caption="Lounge Carvão & Navalha — Café espresso e cerveja artesanal cortesia">
+            <img src="assets/images/gallery-lounge.jpg" alt="Lounge com café espresso e cerveja artesanal sobre mesa escura" loading="lazy">
+            <figcaption class="bento-caption">
+              <span class="bento-tag">Lounge</span>
+              <strong>Café &amp; Cerveja Cortesia</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="bento-item bento-bottom-left" data-lightbox-src="assets/images/gallery-tools.jpg" data-lightbox-caption="Ferramentas artesanais — Navalha em latão, tesouras japonesas e escova de cerdas naturais">
+            <img src="assets/images/gallery-tools.jpg" alt="Navalha, tesoura profissional e escova sobre bancada escura" loading="lazy">
+            <figcaption class="bento-caption">
+              <span class="bento-tag">Ofício</span>
+              <strong>Instrumentos de Alta Precisão</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="bento-item bento-bottom-right" data-lightbox-src="assets/images/gallery-beard.jpg" data-lightbox-caption="Acabamento na navalha — Alinhamento cirúrgico dos contornos da barba">
+            <img src="assets/images/gallery-beard.jpg" alt="Detalhe de acabamento e alinhamento de barba na navalha" loading="lazy">
+            <figcaption class="bento-caption">
+              <span class="bento-tag">Detalhe</span>
+              <strong>Acabamento na Navalha</strong>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Depoimentos (3 Cards de Avaliações 5 Estrelas) -->
+        <div class="testimonials-block">
+          <div class="testimonials-header reveal">
+            <div>
+              <span class="section-eyebrow">Avaliações Reais</span>
+              <h3 class="testimonials-title">O que dizem nossos clientes</h3>
+            </div>
+            <div class="google-rating-pill" aria-label="Nota 4.9 de 5 no Google com mais de 420 avaliações">
+              <span class="stars-row" aria-hidden="true">★★★★★</span>
+              <span><strong>4.9/5</strong> no Google</span>
+            </div>
+          </div>
+
+          <div class="testimonials-grid">
+            <article class="testimonial-card reveal">
+              <div class="testimonial-top">
+                <div class="stars-row" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
+                <span class="verified-badge">Google Verificado</span>
+              </div>
+              <p class="testimonial-quote">
+                “Sem dúvida a melhor barbearia da Paulista. Fiz o Combo Carvão &amp; Navalha com o Lucas — o ritual da toalha quente é absurdo, corte cirúrgico e ainda tomei uma IPA gelada de cortesia.”
+              </p>
+              <footer class="testimonial-author">
+                <span class="author-avatar" aria-hidden="true">HM</span>
+                <div>
+                  <strong class="author-name">Henrique Mendonça</strong>
+                  <span class="author-meta">Cliente há 2 anos • Combo Carvão &amp; Navalha</span>
+                </div>
+              </footer>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <div class="testimonial-top">
+                <div class="stars-row" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
+                <span class="verified-badge">Google Verificado</span>
+              </div>
+              <p class="testimonial-quote">
+                “O Rafael é referência em barba terapia. Além de alinhar perfeitamente sem irritar a pele, o ambiente escuro minimalista é super relaxante e o atendimento começa rigorosamente no horário.”
+              </p>
+              <footer class="testimonial-author">
+                <span class="author-avatar" aria-hidden="true">FA</span>
+                <div>
+                  <strong class="author-name">Felipe Alencar</strong>
+                  <span class="author-meta">Cliente há 1 ano • Barba Terapia Tradicional</span>
+                </div>
+              </footer>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <div class="testimonial-top">
+                <div class="stars-row" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
+                <span class="verified-badge">Google Verificado</span>
+              </div>
+              <p class="testimonial-quote">
+                “Agendei online pelo celular em 30 segundos com o Matheus. Degradê impecável, atendimento de alto nível e já aproveitei para levar a pomada matte e o óleo para barba da linha própria.”
+              </p>
+              <footer class="testimonial-author">
+                <span class="author-avatar" aria-hidden="true">TV</span>
+                <div>
+                  <strong class="author-name">Thiago Vasconcelos</strong>
+                  <span class="author-meta">Cliente frequente • Corte Masculino Signature</span>
+                </div>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       8. FOOTER & LOCALIZAÇÃO
+       ========================================================================= -->
+  <footer class="site-footer" id="contato" aria-labelledby="contato-title">
+    <div class="container">
+      <div class="location-grid reveal">
+        <!-- Informações de Contato & Horários -->
+        <div class="location-info">
+          <span class="section-eyebrow">Localização &amp; Horários</span>
+          <h2 class="section-title" id="contato-title">Visite a Barbearia</h2>
+          <p class="location-lead">
+            Localização privilegiada a poucos passos do Metrô Trianon-MASP, com fácil acesso e estacionamento conveniado ao lado.
+          </p>
+
+          <div class="info-list">
+            <div class="info-row">
+              <span class="info-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <div>
+                <strong class="info-label">Endereço</strong>
+                <p class="info-value">Av. Paulista, 1450 - São Paulo, SP</p>
+                <span class="info-sub">Bela Vista • Próximo ao Metrô Trianon-MASP</span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <span class="info-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </span>
+              <div>
+                <strong class="info-label">Horário de Funcionamento</strong>
+                <p class="info-value">Seg–Sex: 09h às 20h &nbsp;|&nbsp; Sáb: 09h às 18h</p>
+                <span class="info-sub">Domingo: Fechado</span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <span class="info-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </span>
+              <div>
+                <strong class="info-label">WhatsApp &amp; Telefone</strong>
+                <p class="info-value">
+                  <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="text-link" id="footer-whatsapp-link">(11) 99999-9999</a>
+                </p>
+                <span class="info-sub">Atendimento rápido e confirmações online</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-actions">
+            <button type="button" class="btn btn-primary" data-open-booking>Agendar Horário</button>
+            <div class="social-links" aria-label="Redes sociais">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram da Carvão & Navalha">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook da Carvão & Navalha">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok da Carvão & Navalha">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mapa Estilizado Dark (Av. Paulista, 1450) -->
+        <div class="dark-map-card" aria-label="Mapa estilizado da localização na Av. Paulista, 1450 - São Paulo, SP">
+          <div class="dark-map-canvas">
+            <svg class="dark-map-svg" viewBox="0 0 640 440" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mapa vetorial dark da região da Av. Paulista, 1450">
+              <defs>
+                <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#C89B3C" stop-opacity="0.45"/>
+                  <stop offset="100%" stop-color="#C89B3C" stop-opacity="0"/>
+                </radialGradient>
+                <pattern id="mapGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1F1F23" stroke-width="0.7"/>
+                </pattern>
+              </defs>
+
+              <!-- Base escura -->
+              <rect width="640" height="440" fill="#141416"/>
+              <rect width="640" height="440" fill="url(#mapGrid)"/>
+
+              <!-- Quadras urbanas estilizadas -->
+              <g fill="#1B1B1E" stroke="#26262A" stroke-width="1">
+                <polygon points="20,40 165,10 190,115 45,145"/>
+                <polygon points="195,5 340,-20 365,85 220,110"/>
+                <polygon points="370,-25 530,-50 555,55 395,80"/>
+                <polygon points="55,175 200,145 225,245 80,275"/>
+                <polygon points="230,140 375,110 400,210 255,240"/>
+                <polygon points="405,105 565,75 595,175 430,205"/>
+                <polygon points="95,310 240,280 265,385 120,415"/>
+                <polygon points="270,275 415,245 445,350 295,380"/>
+                <polygon points="445,240 605,210 635,315 475,345"/>
+              </g>
+
+              <!-- Parque Trianon (destaque discreto) -->
+              <polygon points="230,140 375,110 400,210 255,240" fill="#17201B" stroke="#25362C" stroke-width="1.2"/>
+              <text x="275" y="178" fill="#63796B" font-family="Inter, sans-serif" font-size="10" font-weight="600" letter-spacing="1.2">PARQUE TRIANON</text>
+
+              <!-- Vias transversais -->
+              <g stroke="#2C2C31" stroke-width="6" stroke-linecap="round">
+                <line x1="150" y1="0" x2="265" y2="440"/>
+                <line x1="335" y1="0" x2="450" y2="440"/>
+                <line x1="520" y1="0" x2="620" y2="390"/>
+                <line x1="0" y1="158" x2="640" y2="34"/>
+                <line x1="0" y1="418" x2="640" y2="294"/>
+              </g>
+
+              <!-- Via Principal: Av. Paulista (com destaque dourado sutil) -->
+              <line x1="-10" y1="292" x2="650" y2="164" stroke="#2E2E32" stroke-width="18"/>
+              <line x1="-10" y1="292" x2="650" y2="164" stroke="#C89B3C" stroke-opacity="0.32" stroke-width="2" stroke-dasharray="10 8"/>
+
+              <!-- Nomes de ruas -->
+              <text x="92" y="271" fill="#C89B3C" font-family="Oswald, sans-serif" font-size="12" font-weight="600" letter-spacing="2" transform="rotate(-11.1 92 271)">AV. PAULISTA</text>
+              <text x="455" y="199" fill="#A1A1AA" font-family="Oswald, sans-serif" font-size="11" letter-spacing="1.8" transform="rotate(-11.1 455 199)">AV. PAULISTA</text>
+              <text x="192" y="346" fill="#71717A" font-family="Inter, sans-serif" font-size="9.5" transform="rotate(75 192 346)">R. PEIXOTO GOMIDE</text>
+              <text x="382" y="314" fill="#71717A" font-family="Inter, sans-serif" font-size="9.5" transform="rotate(75 382 314)">AL. CAMPINAS</text>
+
+              <!-- Referência Metrô Trianon-MASP -->
+              <g transform="translate(244, 240)">
+                <circle r="7" fill="#1C1C1E" stroke="#A1A1AA" stroke-width="1.5"/>
+                <text x="0" y="3.5" text-anchor="middle" fill="#F5F5F5" font-family="Inter, sans-serif" font-size="8.5" font-weight="600">M</text>
+                <text x="12" y="3" fill="#A1A1AA" font-family="Inter, sans-serif" font-size="9.5" font-weight="500">Metrô Trianon-MASP</text>
+              </g>
+
+              <!-- Aura e Marcador da Barbearia (Av. Paulista, 1450) -->
+              <circle cx="348" cy="222" r="56" fill="url(#pinGlow)"/>
+              <circle cx="348" cy="222" r="18" fill="none" stroke="#C89B3C" stroke-opacity="0.45" stroke-width="1.5" class="map-pulse-ring"/>
+              <g transform="translate(348, 222)">
+                <path d="M0 -24C-9.5 -24 -17 -16.5 -17 -7C-17 5.5 0 21 0 21C0 21 17 5.5 17 -7C17 -16.5 9.5 -24 0 -24Z" fill="#C89B3C" stroke="#111111" stroke-width="2"/>
+                <circle cx="0" cy="-7" r="5" fill="#111111"/>
+              </g>
+            </svg>
+
+            <!-- Etiqueta flutuante do ponto -->
+            <div class="map-pin-tooltip">
+              <span class="map-pin-dot" aria-hidden="true"></span>
+              <span>CARVÃO &amp; NAVALHA</span>
+            </div>
+
+            <!-- Card de endereço flutuante sobre o mapa -->
+            <div class="map-overlay-card">
+              <div>
+                <strong class="map-card-title">Av. Paulista, 1450</strong>
+                <span class="map-card-sub">Bela Vista • São Paulo, SP • 3 min do Metrô</span>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Av.+Paulista,+1450+-+São+Paulo,+SP"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline btn-sm"
+              >
+                Abrir no Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior do Footer -->
+      <div class="footer-bottom">
+        <div class="footer-brand">
+          <strong class="footer-logo">CARVÃO &amp; NAVALHA</strong>
+          <span class="footer-slogan">Tradição no corte, precisão no detalhe.</span>
+        </div>
+
+        <nav class="footer-links" aria-label="Links rápidos do rodapé">
+          <a href="#inicio">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#equipe">Equipe</a>
+          <a href="#galeria">Galeria</a>
+        </nav>
+
+        <p class="footer-copy">&copy; <span id="current-year">2026</span> Carvão &amp; Navalha. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL DE AGENDAMENTO (4 ETAPAS)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title" aria-hidden="true">
+    <div class="modal-panel">
+      <header class="modal-header">
+        <div>
+          <span class="modal-eyebrow">Agendamento Online</span>
+          <h2 class="modal-title" id="booking-modal-title">Reserve seu Horário</h2>
+        </div>
+        <button type="button" class="icon-close-btn" id="close-booking-btn" aria-label="Fechar modal de agendamento">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </header>
+
+      <!-- Indicador de 4 Etapas -->
+      <ol class="booking-stepper" id="booking-stepper" aria-label="Etapas do agendamento">
+        <li class="step-indicator is-active" data-step-indicator="1">
+          <button type="button" class="step-btn" data-goto-step="1">
+            <span class="step-num">1</span>
+            <span class="step-label">Serviço</span>
+          </button>
+        </li>
+        <li class="step-indicator" data-step-indicator="2">
+          <button type="button" class="step-btn" data-goto-step="2">
+            <span class="step-num">2</span>
+            <span class="step-label">Barbeiro</span>
+          </button>
+        </li>
+        <li class="step-indicator" data-step-indicator="3">
+          <button type="button" class="step-btn" data-goto-step="3">
+            <span class="step-num">3</span>
+            <span class="step-label">Data/Hora</span>
+          </button>
+        </li>
+        <li class="step-indicator" data-step-indicator="4">
+          <button type="button" class="step-btn" data-goto-step="4">
+            <span class="step-num">4</span>
+            <span class="step-label">Confirmar</span>
+          </button>
+        </li>
+      </ol>
+
+      <!-- Banner contextual de pré-seleção (quando usuário clicou em um barbeiro/serviço) -->
+      <div class="preselect-banner" id="booking-preselect-banner" hidden></div>
+
+      <!-- Conteúdo das Etapas -->
+      <div class="modal-body" id="booking-modal-body">
+        <!-- ETAPA 1: SERVIÇO -->
+        <section class="booking-step is-active" data-step="1" aria-label="Etapa 1: Escolha o serviço">
+          <h3 class="step-heading">1. Qual serviço você deseja realizar?</h3>
+          <div class="booking-services-list" id="booking-services-list"></div>
+        </section>
+
+        <!-- ETAPA 2: BARBEIRO -->
+        <section class="booking-step" data-step="2" aria-label="Etapa 2: Escolha o barbeiro">
+          <h3 class="step-heading">2. Escolha seu profissional</h3>
+          <div class="booking-barbers-list" id="booking-barbers-list"></div>
+        </section>
+
+        <!-- ETAPA 3: DATA E HORÁRIO -->
+        <section class="booking-step" data-step="3" aria-label="Etapa 3: Escolha data e horário">
+          <h3 class="step-heading">3. Selecione a melhor data e horário</h3>
+
+          <div class="date-picker-block">
+            <div class="date-block-header">
+              <span class="field-label">Próximas datas disponíveis</span>
+              <label class="custom-date-trigger">
+                <span>Outra data</span>
+                <input type="date" id="booking-date-input" aria-label="Escolher outra data no calendário">
+              </label>
+            </div>
+            <div class="date-chips-row" id="booking-date-chips"></div>
+            <p class="field-error" id="booking-date-error" hidden></p>
+          </div>
+
+          <div class="time-picker-block">
+            <div class="date-block-header">
+              <span class="field-label">Horários disponíveis</span>
+              <span class="hours-hint" id="booking-hours-hint">Seg–Sex: 09h às 20h</span>
+            </div>
+            <div class="time-slots-grid" id="booking-time-slots"></div>
+          </div>
+        </section>
+
+        <!-- ETAPA 4: NOME / TELEFONE + RESUMO VISUAL -->
+        <section class="booking-step" data-step="4" aria-label="Etapa 4: Seus dados e resumo">
+          <h3 class="step-heading">4. Seus dados e resumo do agendamento</h3>
+
+          <div class="booking-summary-card" id="booking-summary-card">
+            <!-- Preenchido dinamicamente pelo JS -->
+          </div>
+
+          <form class="booking-form" id="booking-client-form" novalidate>
+            <div class="form-group">
+              <label for="client-name" class="field-label">Seu nome completo *</label>
+              <input
+                type="text"
+                id="client-name"
+                name="clientName"
+                class="form-input"
+                placeholder="Ex.: Gabriel Oliveira"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="client-phone" class="field-label">WhatsApp / Telefone *</label>
+              <input
+                type="tel"
+                id="client-phone"
+                name="clientPhone"
+                class="form-input"
+                placeholder="(11) 99999-9999"
+                autocomplete="tel"
+                maxlength="15"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="client-notes" class="field-label">Observações <span class="label-optional">(opcional)</span></label>
+              <input
+                type="text"
+                id="client-notes"
+                name="clientNotes"
+                class="form-input"
+                placeholder="Ex.: Preferência por degradê navalhado, café sem açúcar..."
+              >
+            </div>
+
+            <p class="field-error" id="booking-form-error" hidden></p>
+          </form>
+        </section>
+      </div>
+
+      <!-- Rodapé do Modal -->
+      <footer class="modal-footer">
+        <button type="button" class="btn btn-outline" id="booking-prev-btn" hidden>
+          Voltar
+        </button>
+        <div class="modal-footer-right">
+          <span class="modal-step-hint" id="booking-step-hint">Passo 1 de 4</span>
+          <button type="button" class="btn btn-primary" id="booking-next-btn">
+            Continuar
+          </button>
+          <button type="button" class="btn btn-primary btn-whatsapp-confirm" id="booking-confirm-btn" hidden>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.49 0 .15 5.34.15 11.91c0 2.1.55 4.15 1.59 5.95L0 24l6.31-1.65a11.89 11.89 0 0 0 5.74 1.46h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.17-3.44-8.42zM12.06 21.8h-.01a9.87 9.87 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 0 1 2.9 7c0 5.45-4.44 9.88-9.9 9.88zm5.43-7.41c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+            <span>Confirmar no WhatsApp</span>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       DRAWER LATERAL DO CARRINHO
+       ========================================================================= -->
+  <div class="drawer-backdrop" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title" aria-hidden="true">
+    <aside class="drawer-panel">
+      <header class="drawer-header">
+        <div class="drawer-title-wrap">
+          <h2 class="drawer-title" id="cart-drawer-title">Seu Carrinho</h2>
+          <span class="drawer-count-pill" id="drawer-items-count">0 itens</span>
+        </div>
+        <button type="button" class="icon-close-btn" id="close-cart-btn" aria-label="Fechar carrinho">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </header>
+
+      <div class="drawer-body" id="cart-items-container">
+        <!-- Renderizado dinamicamente pelo JS -->
+      </div>
+
+      <footer class="drawer-footer" id="cart-drawer-footer">
+        <div class="cart-note">
+          Retire na unidade Av. Paulista ou combine a entrega pelo WhatsApp.
+        </div>
+        <div class="cart-subtotal-row">
+          <span>Subtotal</span>
+          <strong class="cart-subtotal-value" id="cart-subtotal">R$ 0,00</strong>
+        </div>
+        <button type="button" class="btn btn-primary btn-full btn-lg" id="checkout-whatsapp-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.49 0 .15 5.34.15 11.91c0 2.1.55 4.15 1.59 5.95L0 24l6.31-1.65a11.89 11.89 0 0 0 5.74 1.46h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.17-3.44-8.42zM12.06 21.8h-.01a9.87 9.87 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 0 1 2.9 7c0 5.45-4.44 9.88-9.9 9.88zm5.43-7.41c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+          <span>Finalizar Pedido no WhatsApp</span>
+        </button>
+        <button type="button" class="btn-text-muted" id="clear-cart-btn">Limpar carrinho</button>
+      </footer>
+    </aside>
+  </div>
+
+  <!-- =========================================================================
+       LIGHTBOX DA GALERIA
+       ========================================================================= -->
+  <div class="lightbox-backdrop" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada da foto" aria-hidden="true">
+    <button type="button" class="icon-close-btn lightbox-close" id="close-lightbox-btn" aria-label="Fechar foto ampliada">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <figure class="lightbox-figure">
+      <img src="" alt="" id="lightbox-img">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+  </div>
+
+  <!-- =========================================================================
+       BOTÃO FLUTUANTE DO WHATSAPP
+       ========================================================================= -->
+  <a
+    href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Carv%C3%A3o%20%26%20Navalha."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    id="whatsapp-float"
+    aria-label="Conversar no WhatsApp da Carvão & Navalha"
+  >
+    <span class="whatsapp-tooltip">Fale no WhatsApp</span>
+    <span class="whatsapp-circle" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.49 0 .15 5.34.15 11.91c0 2.1.55 4.15 1.59 5.95L0 24l6.31-1.65a11.89 11.89 0 0 0 5.74 1.46h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.17-3.44-8.42zM12.06 21.8h-.01a9.87 9.87 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 0 1 2.9 7c0 5.45-4.44 9.88-9.9 9.88zm5.43-7.41c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/>
+      </svg>
+    </span>
+  </a>
+
+  <!-- Toast de Feedback -->
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
